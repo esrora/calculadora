@@ -23,9 +23,10 @@ jobs:
         composer install --no-progress --no-suggest --prefer-dist
 
     - name: Run tests
-      run: vendor/bin/phpunit
+      run: vendor/bin/phpunit tests
 
   construir:
+    needs: test
     runs-on: ubuntu-latest
     steps:
     - name: Hacer checkout
