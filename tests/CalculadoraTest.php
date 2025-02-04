@@ -14,4 +14,13 @@ class CalculadoraTest extends TestCase
         $result = $calculadora->suma(1.5, 2.5);
         $this->assertEquals(4.0, $result);
     }
+    public function testResta(): void
+    {
+        $calculadora = new Calculadora();
+        $result = $calculadora->resta(3, 2);
+        $this->assertEquals(1, $result);
+
+        $result = $calculadora->resta(3.5, 2.5);
+        $this->assertEquals(1.0, $result);
+    }
 }
